@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/appbar.dart';
-import 'package:flutter_application_2/buttonrow.dart';
-import 'package:flutter_application_2/myinformation.dart';
 import 'package:flutter_application_2/profilepage.dart';
 import 'package:flutter_application_2/splashscreen.dart';
 import 'package:flutter_application_2/text.dart';

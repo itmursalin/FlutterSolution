@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_application_2/profilepage.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -16,89 +16,98 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Container(
         alignment: Alignment.center,
         height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            //Image Container
+            // Image container
             Container(
-              height: MediaQuery.of(context).size.height / 5.2,
-              width: MediaQuery.of(context).size.height / 3,
+              margin: EdgeInsets.only(
+                top: 40,
+              ),
+              height: MediaQuery.of(context).size.height / 5,
+              width: MediaQuery.of(context).size.width / 1.4,
               decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
                 border: Border.all(
-                  color: Color.fromRGBO(80, 120, 77, 1),
+                  color: Color.fromRGBO(82, 122, 77, 1),
                   width: 3,
                   style: BorderStyle.solid,
                 ),
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(15),
                 image: DecorationImage(
                   image: AssetImage("images/cover.jpg"),
+                  fit: BoxFit.fill,
                 ),
               ),
             ),
 
-            //Text Container
+            // Text Container
             Container(
               height: MediaQuery.of(context).size.height / 3,
-              width: MediaQuery.of(context).size.height / 2,
+              width: MediaQuery.of(context).size.width / 1.5,
               margin: EdgeInsets.only(
                 bottom: 50,
               ),
               child: Text(
-                "Welcome to Mahmudul MURSALIN.\n"
-                "An Android Developer by ICT Devition of BD\n"
-                "Lets enter the course.",
+                "Welcome to \nMahmudul MURSALIN.\n"
+                "One of the most Intelecual app developer in Khulna, BD.\n"
+                "Let's Enter in this course.",
                 style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w800,
-                    fontStyle: FontStyle.italic,
-                    color: Color.fromRGBO(10, 0, 100, 1),
-                    decoration: TextDecoration.underline,
-                    decorationStyle: TextDecorationStyle.double,
-                    decorationColor: Color.fromRGBO(15, 5, 90, .8)),
+                  fontSize: 21,
+                  fontWeight: FontWeight.w900,
+                  fontStyle: FontStyle.italic,
+                  color: Color.fromRGBO(0, 0, 255, 1),
+                  wordSpacing: 2,
+                ),
                 textAlign: TextAlign.center,
               ),
             ),
-            //Button Container InkWell
+
+            // Button Container InkWell
+
             InkWell(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ProfilePage()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProfilePage(),
+                  ),
+                );
               },
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 20),
-                height: MediaQuery.of(context).size.height / 9,
-                width: MediaQuery.of(context).size.width / 3,
+                height: MediaQuery.of(context).size.height / 13,
+                width: MediaQuery.of(context).size.width / 3.5,
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: Color.fromRGBO(0, 250, 0, 0.7),
+                    color: Color.fromRGBO(0, 0, 255, 0.7),
                     width: 3,
                     style: BorderStyle.solid,
                   ),
-                  borderRadius: BorderRadius.circular(20),
-                  color: Color.fromRGBO(103, 123, 150, 1),
+                  borderRadius: BorderRadius.circular(15),
+                  color: Color.fromRGBO(103, 123, 235, 1),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "START",
+                      "Start",
                       style: TextStyle(
                         fontSize: 15,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w600,
                         color: Color.fromRGBO(0, 0, 0, 1),
                       ),
                     ),
                     Icon(
                       Icons.arrow_forward_ios_rounded,
                       size: 15,
-                      color: Color.fromRGBO(0, 0, 0, .9),
-                    )
+                      color: Color.fromRGBO(0, 0, 0, 1),
+                    ),
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
