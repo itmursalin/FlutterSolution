@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_application_2/models/models.dart';
 import 'package:flutter_application_2/profilepage.dart';
 
 class Follower_page extends StatefulWidget {
